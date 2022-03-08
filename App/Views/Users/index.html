@@ -1,0 +1,17 @@
+<a href="/">Main page</a>
+<br>
+<a href="/users/create">Create</a>
+<ul>
+    {% for user in users %}
+    <li>
+
+            {{user.id}}
+            {{user.uid}}
+            {{user.email}}
+            {{user.password}}
+
+
+        {% endfor %}
+
+    </li>
+</ul>

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+    <p>
+        <a href="/users/create">Register</a> |
+        <a href="/">Back to main page</a>
+    </p>
+</div>
+
+<form method="post" action="/users/login">
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required class="input_box"/>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required class="input_box"/>
+    </div>
+    <div>
+        <button type="submit" class="button_box">Log in</button>
+    </div>
+
+</form>
+
+{% endblock %}

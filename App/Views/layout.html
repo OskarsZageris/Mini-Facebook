@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FriendsApp</title>
+</head>
+<body>
+{% if session.userid is defined %}
+<form method="post" action="/">
+    Hello, <a href="/users/{{ session.userid }}">{{ session.username }}</a>! |
+    <button type="submit" class="button_box">Log out</button>
+</form>
+{% else %}
+Hello, User, Please sign in!
+{% endif %}
+<div id="content">{%block content%}{%endblock%}</div>
+<div id="footer">
+    &copy; Copyright 2022 - Friends App
+</div>
+</body>
+
+
+</html>
